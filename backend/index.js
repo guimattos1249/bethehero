@@ -2,8 +2,8 @@ const express = require('express');
 
 const app = express();
 
-app.get('/users', (req, res) => {
-    const params = req.query;
+app.get('/users/:id', (req, res) => {
+    const params = req.params;
 
     console.log(params);
 
