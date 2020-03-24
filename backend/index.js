@@ -2,10 +2,12 @@ const express = require('express');
 
 const app = express();
 
-app.get('/users/:id', (req, res) => {
-    const params = req.params;
+app.use(express.json());
 
-    console.log(params);
+app.post('/users', (req, res) => {
+    const body = req.body;
+
+    console.log(body);
 
     return res.json({
         nome: "guilherme",
